@@ -16,13 +16,13 @@ def read():
 
 def draw_signal(signal):
     plt.title("Сигнал")
-    plt.plot(range(len(signal)), signal, color='indigo')
+    plt.plot(range(len(signal)), signal, color='k')
     plt.show()
 
 
 def draw_histogram(signal):
     bins = int(1.72 * (len(signal) ** (1 / 3)))
-    hist = plt.hist(signal, bins, color='indigo')
+    hist = plt.hist(signal, bins, color='k')
     plt.title("Гистограмма сигнала")
     plt.show()
     return hist, bins
@@ -93,11 +93,11 @@ def draw_zones(zones, zones_types, signal_data):
 
     for i in range(len(zones)):
         if zones_types[i] == "фон":
-            color = 'aqua'
+            color = 'b'
         elif zones_types[i] == "сигнал":
-            color = 'indigo'
+            color = 'k'
         else:
-            color = 'violet'
+            color = 'r'
         plt.plot([element for element in range(zones[i][0], zones[i][1], 1)], signal_data[i], color=color, label=zones_types[i])
     plt.legend()
     plt.show()

@@ -40,10 +40,10 @@ def printEst(x, y, y_model, strin):
     return y_mnk, y_mnm
 
 def Draw(x, y, y_model, y_mnk, y_mnm, strin):
-    plt.plot(x, y, 'o', label='Выборка', color='darkviolet')
-    plt.plot(x, y_model, label='Модель', color='royalblue', linewidth=2)
-    plt.plot(x, y_mnk, label='МНК', color='violet', linewidth=2)
-    plt.plot(x, y_mnm, label='МНМ', color='mediumspringgreen', linewidth=2)
+    plt.plot(x, y, 'o', label='Выборка', color='y')
+    plt.plot(x, y_model, label='Модель', color='r', linewidth=2)
+    plt.plot(x, y_mnk, label='МНК', color='b', linewidth=2)
+    plt.plot(x, y_mnm, label='МНМ', color='k', linewidth=2)
     plt.legend()
     plt.title(strin)
     plt.grid()
